@@ -27,7 +27,7 @@ public class HtmxViewMethodReturnValueHandler implements HandlerMethodReturnValu
                                   NativeWebRequest webRequest) throws Exception {
 
         if (returnValue instanceof HtmxView htmxView) {
-            mavContainer.setView(FragmentsRendering.with(htmxView.getViews()).build());
+        		mavContainer.setView(FragmentsRendering.fragments(htmxView.getViews()).build());
         } else if (returnValue != null) {
             throw new UnsupportedOperationException("Unexpected return type: " + returnType.getParameterType().getName() + " in method: " + returnType.getMethod());
         }
