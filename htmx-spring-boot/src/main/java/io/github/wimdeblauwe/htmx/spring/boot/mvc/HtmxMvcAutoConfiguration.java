@@ -54,7 +54,7 @@ public class HtmxMvcAutoConfiguration implements WebMvcRegistrations, WebMvcConf
     @Bean
     @ConditionalOnBean(View.class)
     @ConditionalOnMissingBean
-    public HtmxViewResolver htmxViewResolver() {
+    HtmxViewResolver htmxViewResolver() {
         HtmxViewResolver resolver = new HtmxViewResolver();
         resolver.setOrder(Ordered.LOWEST_PRECEDENCE - 10);
         return resolver;
