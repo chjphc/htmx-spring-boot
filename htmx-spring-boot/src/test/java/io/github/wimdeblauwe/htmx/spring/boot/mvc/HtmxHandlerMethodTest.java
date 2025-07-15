@@ -399,9 +399,13 @@ public class HtmxHandlerMethodTest {
 
     static class TestExceptionForAnnotatedHandler extends RuntimeException {
 
+		private static final long serialVersionUID = 5518693300475502050L;
+
     }
 
     static class TestExceptionForAnnotatedHandlerWithAnnotationOverride extends RuntimeException {
+
+		private static final long serialVersionUID = 8415222919808405964L;
 
     }
 
