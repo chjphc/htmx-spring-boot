@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 public class HtmxThymeleafAutoConfiguration {
 
     @Bean
-    public HtmxDialect htmxDialect() {
+    HtmxDialect htmxDialect() {
         return new HtmxDialect(JsonMapper.builder().build());
     }
 
